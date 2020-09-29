@@ -21,3 +21,15 @@ jobs:
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
             docker build -t docker.pkg.github.com/rohitdemo/node-shark-facts/shark-facts-docker:latest .
+        
+        - name: 'Deploy to Azure Container Instances'
+          uses: 'azure/aci-deploy@v1'
+          with:
+            resource-group: shark-facts-rg
+            dns-name-label: shark-demo
+            image: docker.pkg.github.com/rohitdemo/node-shark-facts/shark-facts-docker:latest
+            registry-username: ${{ secrets.REGISTRY_USERNAME }}
+            registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+            name: shark-container
+            location: 'west us'
+            ports: 80 8080
