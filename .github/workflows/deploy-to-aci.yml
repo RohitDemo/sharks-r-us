@@ -20,4 +20,4 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
-            docker build .t docker.pkg.github.com/rohitdemo/node-shark-facts/shark-facts-docker:latest .
+            docker build -t docker.pkg.github.com/rohitdemo/node-shark-facts/shark-facts-docker:latest .
