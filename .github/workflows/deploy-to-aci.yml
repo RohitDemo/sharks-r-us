@@ -28,6 +28,7 @@ jobs:
             resource-group: shark-facts-rg
             dns-name-label: shark-demo
             image: docker.pkg.github.com/rohitdemo/node-shark-facts/shark-facts-docker:latest
+            registry-login-server: docker.pkg.github.com
             registry-username: ${{ secrets.REGISTRY_USERNAME }}
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
             name: shark-container
