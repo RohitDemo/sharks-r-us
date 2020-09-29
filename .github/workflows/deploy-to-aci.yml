@@ -1,5 +1,5 @@
 on: [workflow_dispatch]
-name: Linux_Container_Workflow
+name: Deploy to Azure Container Instance
 
 jobs:
     build-and-deploy:
