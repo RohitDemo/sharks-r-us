@@ -1,4 +1,4 @@
-# Sharks R Us :shark:
+# :shark: Sharks R Us 
 
 The website was commissioned by the International Society for Shark Awesomeness.  
 
