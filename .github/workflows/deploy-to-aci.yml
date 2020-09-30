@@ -21,6 +21,7 @@ jobs:
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
             docker build -t docker.pkg.github.com/rohitdemo/sharks-r-us/shark-facts-docker:latest .
+            docker push docker.pkg.github.com/rohitdemo/sharks-r-us/shark-facts-docker:latest
         
         - name: 'Deploy to Azure Container Instances'
           uses: 'azure/aci-deploy@v1'
