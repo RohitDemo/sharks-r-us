@@ -5,7 +5,7 @@
 # or to provide custom queries or build logic.
 name: "CodeQL"
 
-on: [workflow_dispatch]
+on: [workflow_dispatch,pull_request]
 
 jobs:
   analyze:
