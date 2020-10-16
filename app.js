@@ -5,15 +5,7 @@ const router = express.Router();
 const path = __dirname + '/views/';
 const port = 8080;
 
-var RateLimit = require('express-rate-limit');	// var RateLimit = require('express-rate-limit');
-var limiter = new RateLimit({	// var limiter = new RateLimit({
-  windowMs: 1*60*1000, // 1 minute	//   windowMs: 1*60*1000, // 1 minute
-  max: 5	//   max: 5
-});	// });
 
-
-// apply rate limiter to all requests	// // apply rate limiter to all requests
-app.use(limiter);
 
 router.use(function (req,res,next) {
   console.log('/' + req.method);
